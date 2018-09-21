@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 1</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Karpov Pavel</h1>
+    <h2>Урок 1. Введение в ReactJS: современный Javascript</h2>
+    <ol>
+        <li>
+            <h3>Написать функцию loop, которая будет принимать параметры: times (значение по умолчанию = 0), callback (значение по умолчанию = null) и будет в цикле (times раз), вызывать функцию callback. Если функцию не передана, то цикл не должен отрабатывать ни разу. Покажите применение этой функции</h3>
+            <div class="tasks">                
+                <div class="data tasks__item">
+                    <form action="">
+                        <label for="task1-times">Insert times parametr</label>
+                        <input type="number" min="0" id="task1-times" value='5'>
+                        <label for="task1-callback">Insert your own callback function (or just click submit)</label>
+                        <textarea id="task1-callback" cols="30" rows="10">() => task1res.innerHTML += ' hello '</textarea>
+                        <input type="submit" id="task1-sub">
+                    </form>
+                </div>     
+                <div class="source tasks__item">
+                    <h4>source</h4>
+                    <iframe src="js/task1.js" frameborder="0"></iframe>                   
+                </div>           
+                <div class="res tasks__item">
+                    <h4>result output:</h4>
+                    <div id="task1-res" class="res-output"></div>                    
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>Написать функцию calculateArea, которая будет принимать параметры, для вычисления площади (можете выбрать какую то конкретную фигуру, а можете, основываясь на переданных параметрах, выполнять требуемый алгоритм вычисления площади для переданной в параметрах фигуры) и возвращать объект вида: { area, figure, input }, где area - вычисленная площадь, figure - название фигуры, для которой вычислялась площадь, input - входные параметры, по которым было произведено вычисление.</h3>
+            <div class="tasks">                
+                <div class="data tasks__item">
+                    <form>
+                        <label for="task2-figure">Choose geometry figure</label>
+                        <select id="task2-figure"></select>
+                        <div id="inputs"></div>
+                        <input type="submit" id="task2-sub">
+                    </form>
+                </div>     
+                <div class="source tasks__item">
+                    <h4>source</h4>
+                    <iframe src="js/task2.js" frameborder="0"></iframe>                   
+                </div>           
+                <div class="res tasks__item">
+                    <h4>result output:</h4>
+                    <div id="task2-res" class="res-output"></div>                    
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>Необходимо написать иерархию классов вида:</h3>
+            <p>Human -> Employee -> Developer
+Human -> Employee -> Manager
+Каждый Менеджер (Manager) должен иметь внутренний массив своих сотрудников (разработчиков), а также методы по удалению/добавлению разработчиков.
+Каждый Разработчик (Developer) должны иметь ссылку на Менеджера и методы для изменения менеджера (имеется ввиду возможность назначить другого менеджера).
+У класса Human должны быть следующие параметры: name (строка), age (число), dateOfBirth (строка или дата)
+У класса Employee должны присутствовать параметры: salary (число), department (строка)
+В классе Human должен присутствовать метод displayInfo, который возвращает строку со всеми параметрами экземпляра Human.
+В классе Employee должен быть реализовать такой же метод (displayInfo), который вызывает базовый метод и дополняет его параметрами из экземпляра Employee
+Чтобы вызвать метод базового класса, необходимо внутри вызова метода displayInfo класса Employee написать: super.displayInfo(), это вызовет метод disaplyInfo класс Human и вернет строку с параметрами Human'a.</p>
+       <div class="source tasks__item" style="height: 1150px">
+            <h4>source</h4>
+            <iframe src="js/task3.js" frameborder="0" style="height: 96%"></iframe>                   
+        </div>   
+        <div class="res-output">Задание выполняется в консоле. Объекты, принадлежащие классу, "достаются" из массива по имени с помощью функции getPersonByName(Имя, объект с элементами данного класса) </div>
+        </li>
+        <li>
+            <h3>*При помощи генератора написать функцию - анкету, которая запрашивает у пользователя на ввод параметры и передаёт их в генератор. В конце, когда генератор завершается, он должен вернуть все введённые входные параметры в виде объекта. Этот объект нужно вывести в консоли.</h3>
+            <div class="tasks">                
+                <div class="data tasks__item">
+                    <form>
+                        <label for="task4-input" id="task4-info">Введите Ваше имя</label>   
+                        <input type="text" id="task4-input">                        
+                        <input type="submit" id="task4-sub" value="Далее">
+                    </form>
+                </div>     
+                <div class="source tasks__item">
+                    <h4>source</h4>
+                    <iframe src="js/task4.js" frameborder="0"></iframe>                   
+                </div>           
+            </div>
+        </li>
+        <li>
+            <h3>*Написать цикл, который создаёт массив промисов, внутри каждого промиса происходит обращение к ресурсу (https://jsonplaceholder.typicode.com/users/number), где вместо number подставляется число от 1 до 10, в итоге должно получиться 10 промисов. Следует дождаться выполнения загрузки всеми промисами и далее вывести массив загруженных данных.</h3>
+            <div class="source tasks__item">
+            <h4>source</h4>
+            <iframe src="js/task5.js" frameborder="0" ></iframe>                   
+        </div>   
+        <div class="res-output">Задание выполняется в консоле. </div>
+        </li>
+    </ol>
+    <script src="js/task1.js"></script>    
+    <script src="js/task2.js"></script>
+    <script src="js/task3.js"></script>
+    <script src="js/task4.js"></script>
+    <script src="js/task5.js"></script>
+
+</body>
+</html>
