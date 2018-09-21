@@ -1,1 +1,1 @@
-export default from './CommentArea';
+export {default} from './CommentArea';
