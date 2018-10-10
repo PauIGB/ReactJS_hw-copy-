@@ -1,0 +1,2 @@
+export const LINK_CLICK = 'LINK_CLICK';
+export const FORM_CHANGE_HANDLER = 'FORM_CHANGE_HANDLER';

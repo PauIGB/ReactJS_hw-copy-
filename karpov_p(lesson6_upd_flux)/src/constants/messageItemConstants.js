@@ -1,0 +1,1 @@
+export const AUTO_SCROLL = 'AUTO_SCROLL';
