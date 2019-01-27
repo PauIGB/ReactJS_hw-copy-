@@ -1,26 +1,23 @@
 import React, { PureComponent } from 'react';
 
 import CommentArea from 'components/CommentArea';
-import MessageItem from 'containers/MessageItemContainer';
+import MessageItem from 'components/MessageItem';
 
 export default class CommentAreaContainer extends PureComponent {
     constructor(props) {
         super(props);
         this.commentArea = React.createRef();
-    }
+    };
 
     componentDidUpdate(prevProps) {  
-        if (this.props.comments !== prevProps.comments) {
-            if(this.props.comments.length - prevProps.comments.length === 1) {
-                this.scrollDown('smooth');
-            } else {
-                this.scrollDown()
-            }
+        const { comments } = this.props;               
+        if (comments !== prevProps.comments) {
+            const diff = (comments.length - prevProps.comments.length) === 1;
+            this.scrollDown(diff ? 'smooth' : undefined);
         };
     };
     
     scrollDown(behavior) {
-        // const commArea = document.getElementById('test');
         const commArea = this.commentArea.current;
         commArea.scrollTo({
             top: commArea.scrollHeight,
