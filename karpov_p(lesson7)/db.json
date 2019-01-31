@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "companions": [
     {
       "id": 1,
       "name": "Brian"
@@ -9,335 +9,143 @@
       "name": "Johny"
     }
   ],
-  "comments": [
+  "messages": [
     {
       "body": "Brian comment -1",
-      "postId": 1,
+      "companionId": 1,
       "id": 1
     },
     {
       "body": "Brian comment -2",
-      "postId": 1,
+      "companionId": 1,
       "id": 2
     },
     {
       "body": "Johny comment -1",
-      "postId": "2",
+      "companionId": "2",
       "id": 3
     },
     {
       "body": "Johny comment -2",
-      "postId": "2",
+      "companionId": "2",
       "id": 4
     },
     {
       "body": "Hi, Brian",
       "type": "me",
-      "postId": "1",
+      "companionId": "1",
       "id": 5
     },
     {
       "body": "Hi, Johny!",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 6
     },
     {
-      "body": "asdf",
+      "body": "sadf",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 7
     },
     {
-      "body": "ыфа",
+      "body": "asdf",
       "type": "me",
-      "postId": "2",
+      "companionId": "1",
       "id": 8
     },
     {
-      "body": "Johny",
+      "body": "ffff",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 9
     },
     {
-      "body": "Brian",
+      "body": "ffa",
       "type": "me",
-      "postId": "1",
+      "companionId": "2",
       "id": 10
     },
     {
-      "body": "fffa",
+      "body": "fsad",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 11
     },
     {
-      "body": "af",
+      "body": "ееу",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 12
     },
     {
-      "body": "fafffff",
+      "body": "Привет!\n",
       "type": "me",
-      "postId": "1",
+      "companionId": "1",
       "id": 13
     },
     {
-      "body": "fafffffffaeera",
+      "body": "faa",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 14
     },
     {
-      "body": "asdf",
+      "body": "fasd",
       "type": "me",
-      "postId": "1",
+      "companionId": "2",
       "id": 15
     },
     {
       "body": "asdf",
       "type": "me",
-      "postId": "1",
+      "companionId": "1",
       "id": 16
     },
     {
-      "body": "аф",
+      "body": "я тут!\n",
       "type": "me",
-      "postId": "1",
+      "companionId": "1",
       "id": 17
     },
     {
-      "body": "фаааа",
+      "body": "афф",
       "type": "me",
-      "postId": "2",
+      "companionId": "1",
       "id": 18
     },
     {
-      "body": "ааф",
+      "body": "эй Джонни\n",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 19
     },
     {
-      "body": "asdf",
+      "body": "Эй, Брайан",
       "type": "me",
-      "postId": "2",
+      "companionId": "1",
       "id": 20
     },
     {
-      "body": "ffffff",
+      "body": "Сделать так, чтобы при обновлении страницы не дергался экран. Можно добавить анимацию и убрать заглушку loading",
       "type": "me",
-      "postId": "1",
+      "companionId": "2",
       "id": 21
     },
     {
-      "body": "kko\n\n",
+      "body": "Сделать чтобы при обновлении страницы оставался тот же пользователь, а не происходило переключение на первого",
       "type": "me",
-      "postId": "2",
+      "companionId": "2",
       "id": 22
     },
     {
-      "body": "sh",
+      "body": "Убрать перенос слов по частям, слова должны переноситься целиком",
       "type": "me",
-      "postId": "1",
+      "companionId": "2",
       "id": 23
-    },
-    {
-      "body": "fa",
-      "type": "me",
-      "postId": "1",
-      "id": 24
-    },
-    {
-      "body": "ads",
-      "type": "me",
-      "postId": "2",
-      "id": 25
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 26
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 27
-    },
-    {
-      "body": "asd",
-      "type": "me",
-      "postId": "1",
-      "id": 28
-    },
-    {
-      "body": "fads",
-      "type": "me",
-      "postId": "1",
-      "id": 29
-    },
-    {
-      "body": "asd",
-      "type": "me",
-      "postId": "2",
-      "id": 30
-    },
-    {
-      "body": "fa",
-      "type": "me",
-      "postId": "2",
-      "id": 31
-    },
-    {
-      "body": "adf",
-      "type": "me",
-      "postId": "1",
-      "id": 32
-    },
-    {
-      "body": "fasd",
-      "type": "me",
-      "postId": "2",
-      "id": 33
-    },
-    {
-      "body": "af",
-      "type": "me",
-      "postId": "1",
-      "id": 34
-    },
-    {
-      "body": "afdf",
-      "type": "me",
-      "postId": "2",
-      "id": 35
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 36
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 37
-    },
-    {
-      "body": "af",
-      "type": "me",
-      "postId": "1",
-      "id": 38
-    },
-    {
-      "body": "asd",
-      "type": "me",
-      "postId": "2",
-      "id": 39
-    },
-    {
-      "body": "ASD",
-      "type": "me",
-      "postId": "2",
-      "id": 40
-    },
-    {
-      "body": "fasd",
-      "type": "me",
-      "postId": "1",
-      "id": 41
-    },
-    {
-      "body": "fasdf",
-      "type": "me",
-      "postId": "2",
-      "id": 42
-    },
-    {
-      "body": "fff",
-      "type": "me",
-      "postId": "2",
-      "id": 43
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 44
-    },
-    {
-      "body": "sadf",
-      "type": "me",
-      "postId": "2",
-      "id": 45
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "1",
-      "id": 46
-    },
-    {
-      "body": "fsda",
-      "type": "me",
-      "postId": "2",
-      "id": 47
-    },
-    {
-      "body": "fff",
-      "type": "me",
-      "postId": "1",
-      "id": 48
-    },
-    {
-      "body": "вфы",
-      "type": "me",
-      "postId": "2",
-      "id": 49
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "2",
-      "id": 50
-    },
-    {
-      "body": "asdf",
-      "type": "me",
-      "postId": "1",
-      "id": 51
-    },
-    {
-      "body": "afasd",
-      "type": "me",
-      "postId": "2",
-      "id": 52
-    },
-    {
-      "body": "sadf",
-      "type": "me",
-      "postId": "1",
-      "id": 53
-    },
-    {
-      "body": "аыфафы",
-      "type": "me",
-      "postId": "2",
-      "id": 54
-    },
-    {
-      "body": "фыва",
-      "type": "me",
-      "postId": "1",
-      "id": 55
     }
   ],
   "profile": {
-    "name": "Паша"
+    "name": "Paul"
   }
 }

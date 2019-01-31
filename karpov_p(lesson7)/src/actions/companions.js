@@ -5,7 +5,7 @@ export const GET_COMPANIONS  = 'GET_COMPANIONS';
 export function getCompanions() {
     return dispatch => {
         dispatch({type: `${GET_COMPANIONS}_REQUEST`, })
-        return axios.get(`${BASE_URL}/posts`)
+        return axios.get(`${BASE_URL}/companions`)
             .then(({data}) => dispatch({
                 type: GET_COMPANIONS,
                 data,

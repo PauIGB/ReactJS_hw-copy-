@@ -9,7 +9,7 @@ export default function reducer(state = {messages: [], fetching: false }, action
             return { ...state, messages: action.data, fetching: false, };
         
         case ADD_MESSAGE:
-            const messages = [...state.messages, action.data];
+            const messages = [...state.messages, action.message];
             return { ...state, messages };
 
         default:

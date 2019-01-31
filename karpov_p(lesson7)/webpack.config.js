@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, options) => {
   const development = options.mode === 'development';
@@ -74,6 +75,9 @@ module.exports = (env, options) => {
     new MiniCssExtractPlugin({
       filename: development ? 'bundle.css' : 'bundle.min.css'
     }),
+    new CopyWebpackPlugin([
+      {from:'src/favicon.ico',to:'./'},
+    ]), 
     new CleanWebpackPlugin('dist', {})  
   ]
   }

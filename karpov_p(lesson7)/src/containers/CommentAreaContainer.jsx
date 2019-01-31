@@ -1,13 +1,19 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 
+import { eventSubscriber } from '../actions';
 import CommentArea from 'components/CommentArea';
 import MessageItem from 'components/MessageItem';
 
-export default class CommentAreaContainer extends PureComponent {
+class CommentAreaContainer extends PureComponent {
     constructor(props) {
         super(props);
         this.commentArea = React.createRef();
     };
+
+    componentDidMount() {
+        this.props.eventSubscriber()
+    }
 
     componentDidUpdate(prevProps) {  
         const { comments } = this.props;               
@@ -36,3 +42,11 @@ export default class CommentAreaContainer extends PureComponent {
         );
     };  
 };
+
+function mapDispatchToProps(dispatch) {
+    return {
+        eventSubscriber: () => eventSubscriber(dispatch),
+    };
+};
+
+export default connect(null, mapDispatchToProps)(CommentAreaContainer);

@@ -8,6 +8,6 @@ import reducer from './reducers';
 
 const initialState = loadState();
 
-const store = createStore(reducer, initialState, applyMiddleware(thunk, promise, localStorage(), logger));
+const store = createStore(reducer, initialState, applyMiddleware(promise, thunk, localStorage(), logger));
 
 export default store;

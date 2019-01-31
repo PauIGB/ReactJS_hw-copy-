@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
 
 import { addMessage } from '../actions';
 
 import CommentForm from 'components/CommentForm';
 
-class CommentFormContainer extends PureComponent {
+export default class CommentFormContainer extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,8 +15,7 @@ class CommentFormContainer extends PureComponent {
   
     addComment = event => {            
         event.preventDefault(); 
-        const { id, onAddMessage } = this.props;
-        onAddMessage(id, this.state.text)
+        addMessage(this.props.id, this.state.text)
         .then(() => this.setState({
             text: '',
             isDisabled: "disabled",
@@ -42,11 +40,3 @@ class CommentFormContainer extends PureComponent {
         );
     }
 };
-
-function mapDispatchToProps(dispatch) {
-    return {    
-        onAddMessage: (id, text) => dispatch(addMessage(id, text)),
-    };
-};
-
-export default connect(null, mapDispatchToProps)(CommentFormContainer);
