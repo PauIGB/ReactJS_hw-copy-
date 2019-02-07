@@ -155,9 +155,21 @@
       "type": "me",
       "companionId": "2",
       "id": 25
+    },
+    {
+      "body": "fas",
+      "type": "me",
+      "companionId": "1",
+      "id": 26
+    },
+    {
+      "body": "fff",
+      "type": "me",
+      "companionId": "2",
+      "id": 27
     }
   ],
   "user": {
-    "name": "ffffffff"
+    "name": "Paul"
   }
 }
