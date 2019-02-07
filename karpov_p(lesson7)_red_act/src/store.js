@@ -6,8 +6,9 @@ import localStorage, {loadState} from './middleware/local-storage';
 
 import reducer from './reducers';
 
-const initialState = loadState();
+// const initialState = loadState('user', 'name');
+const initialState = loadState('user');
 
-const store = createStore(reducer, initialState, applyMiddleware(promise, thunk, localStorage(), logger));
+const store = createStore(reducer, initialState, applyMiddleware(promise, thunk, localStorage('user', 'name'), logger));
 
 export default store;

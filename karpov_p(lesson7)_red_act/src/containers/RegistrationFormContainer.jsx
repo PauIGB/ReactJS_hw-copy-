@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
-import { getUser } from '../actions';
+import { fetchUser } from '../actions';
 
 import RegistrationForm from 'components/RegistrationForm';
 
@@ -10,38 +10,34 @@ class RegistrationFormContainer extends PureComponent {
         super(props);
         this.state = {
             user_name: '',
-            isDisabled: 'disabled',  
-            status: '',                     
+            isDisabled: 'disabled',                     
         };   
     }
 
-    handleChange = (event) => {
+    handleChange = event => {
         this.setState({ [event.target.name]: event.target.value, });
         (event.target.value) ? this.setState({ isDisabled: false, }) : this.setState({ isDisabled: 'disabled', });              
     }
     
-    btnClick = (event) => {
+    btnClick = event => {
         event.preventDefault();
-        const { onGetUser,history } = this.props;            
+        const { onGetUser, history } = this.props;            
         const { user_name } = this.state;
         this.setState({status: '...waiting for server response', });
         onGetUser(user_name)
-        .then(() => !this.props.user.fetching && this.props.user.name ? 
-                history.push('/chat') 
-            : 
-                this.setState({status: '...something went wrong, open browser console'})
-        );          
+        .then(() => !this.props.error && history.push('/chat'));          
     }
 
     render() {  
-        const { isDisabled, user_name, status, } = this.state;
+        const { isDisabled, user_name,  } = this.state;
+        const { error } = this.props;
        
         return (  
             <RegistrationForm 
                 user_name={user_name}
                 isDisabled={isDisabled}
-                status={status}             
-                onHandleChange={this.handleChange}         
+                error={error}             
+                onHandleChange={this.handleChange}
                 onClick={this.btnClick} 
             />       
         );
@@ -51,12 +47,14 @@ class RegistrationFormContainer extends PureComponent {
 function mapStateToProps(state) {
     return {
         user: state.user,
+        loading: state.user.loading,
+        error: state.user.error,
     }
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        onGetUser: name => dispatch(getUser(name)),
+        onGetUser: name => dispatch(fetchUser(name)),
     }
 };
 

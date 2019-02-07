@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default function RegistrationForm(props) { 
-    const { user_name, isDisabled, status, onHandleChange, onClick } = props;
+    const { user_name, isDisabled, error, onHandleChange, onClick } = props;
     const regInputStyles = classNames('form-reg__input');
     const regSubStyles = classNames('form-reg__sub-btn', {
         'form-reg__sub-btn--disabled': isDisabled === 'disabled',
@@ -22,7 +22,7 @@ export default function RegistrationForm(props) {
                 <input className={regInputStyles} id="reg-input" type="text" name="user_name" onChange={onHandleChange} placeholder="Ваше имя" value={user_name} />
                 <button className={regSubStyles} id="reg-submit" onClick={onClick} disabled={isDisabled}>Войти</button>
             </form>
-            <div className={statusBlock}>{status}</div>
+            <div className={statusBlock}>{error}</div>
         </Fragment>
         );   
 };
