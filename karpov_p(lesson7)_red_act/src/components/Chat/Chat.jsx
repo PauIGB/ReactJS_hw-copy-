@@ -13,7 +13,7 @@ export default function Chat (props) {
            <h1 className="main-heading">Welcome to chat, dear {userName}</h1>
            <СompanionsList companions={companions} />
            <Switch>
-                {routes.map((route, idx) => <Route {...route} key={idx}/>)}                   
+                {routes.map((route, idx) => <Route {...route} key={idx} />)}                   
            </Switch>
        </Fragment>
     );

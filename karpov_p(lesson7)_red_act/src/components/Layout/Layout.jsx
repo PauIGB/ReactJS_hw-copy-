@@ -13,7 +13,11 @@ export default function Layout() {
         <div className="wrapper">
             <Switch>
                 <Route path='/' component={RegistrationForm} exact />
-                <Route path="/chat" render={() => <Chat exact />} />
+                <Route 
+                    path="/chat" 
+                    // render={() => <Chat exact /> }  
+                    component={Chat}
+                />
             </Switch>
         </div>
     );

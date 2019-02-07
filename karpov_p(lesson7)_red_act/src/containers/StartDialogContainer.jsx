@@ -1,5 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
+
 import { fetchMessages } from '../actions';
 
 import CommentArea from 'containers/CommentAreaContainer';
@@ -43,4 +45,4 @@ function mapDispatchToProps (dispatch) {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(StartDialogContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(StartDialogContainer));
