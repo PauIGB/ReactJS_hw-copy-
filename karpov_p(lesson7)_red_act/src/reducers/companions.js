@@ -1,14 +1,13 @@
-import { GET_COMPANIONS } from '../actions';
+import { handleAction } from 'redux-actions'
 
-export default function reducer(state = {companions: [], fetching: false }, action) {
-    switch(action.type) {
-        case `${GET_COMPANIONS}_REQUEST`:
-            return { ...state, fetching: true, };
+const defaultState = {
+    companions: [],
+};
 
-        case GET_COMPANIONS:
-            return { ...state, companions: action.data, fetching: false, };
+const reducer = handleAction(
+    'GET_COMPANIONS',
+    (state, action) => ({...state, companions: action.payload }),
+    defaultState
+);
 
-        default:
-            return state;
-    }
-}
+export default reducer;

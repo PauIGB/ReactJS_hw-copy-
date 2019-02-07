@@ -143,9 +143,21 @@
       "type": "me",
       "companionId": "2",
       "id": 23
+    },
+    {
+      "body": "test",
+      "type": "me",
+      "companionId": "1",
+      "id": 24
+    },
+    {
+      "body": "testing\n",
+      "type": "me",
+      "companionId": "2",
+      "id": 25
     }
   ],
-  "profile": {
-    "name": "mmm"
+  "user": {
+    "name": "ffffffff"
   }
 }

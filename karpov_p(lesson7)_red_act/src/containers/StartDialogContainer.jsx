@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getMessages } from '../actions';
+import { fetchMessages } from '../actions';
 
 import CommentArea from 'containers/CommentAreaContainer';
 import CommentForm from 'containers/CommentFormContainer';
@@ -39,7 +39,7 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
     return {
-        onGetMessages: id => dispatch(getMessages(id)),
+        onGetMessages: id => dispatch(fetchMessages(id)),
     };
 };
 

@@ -1,15 +1,10 @@
-export function loadState(key = 'state', param) {
+export function loadState(key = 'state') {
     try{
         let json = localStorage.getItem(key);
         if(json === null) {
             return undefined;
         } else {     
-            let data = JSON.parse(json);
-            if(param) {
-                let obj = Object.create({});
-                obj[param] = data[param];
-                data = obj;
-            };
+            let data = JSON.parse(json);           
             return key !== 'state' ? { [key]: data } : data;
         }
     } catch(error) {

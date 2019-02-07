@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import { addMessage } from '../actions';
+import { postMessage } from '../actions';
 
 import CommentForm from 'components/CommentForm';
 
@@ -11,21 +11,21 @@ export default class CommentFormContainer extends PureComponent {
             text: '', 
             isDisabled: 'disabled',
         };   
-    }
+    };
   
     addComment = event => {            
         event.preventDefault(); 
-        addMessage(this.props.id, this.state.text)
+        postMessage(this.props.id, this.state.text)
         .then(() => this.setState({
             text: '',
             isDisabled: "disabled",
         })); 
-    } 
+    };
         
     handleChange = event => {        
         this.setState({ [event.target.name]: event.target.value, });
         (event.target.value) ? this.setState({ isDisabled: false, }) : this.setState({ isDisabled: 'disabled', });              
-    }
+    };
 
     render() {
         const{ text, isDisabled } = this.state;
@@ -38,5 +38,5 @@ export default class CommentFormContainer extends PureComponent {
                 onAddComment={this.addComment}
             />       
         );
-    }
+    };
 };

@@ -10,10 +10,7 @@ export default function СompanionsListContainer (props) {
         return (<CompanionItem key={idx} text={companion.name} id={companion.id} />)         
     });    
 
-    return (
-        companionsRend && !companions.fetching ?          
-            <СompanionsList companionsRend={companionsRend} />  
-            :
-            '..loading'
+    return (     
+        <СompanionsList companionsRend={companionsRend} />
     );
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { getCompanions } from '../actions';
+import { fetchCompanions } from '../actions';
 
 import Chat from 'components/Chat';
 
@@ -20,7 +20,8 @@ class ChatContainer extends Component {
     }; 
 
     render() {  
-        const { userName, companions } = this.props;            
+        const { userName, companions } = this.props;  
+       
         return (  
             <Chat 
                 userName={userName} 
@@ -39,7 +40,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        onGetCompanions: () => dispatch(getCompanions()),
+        onGetCompanions: () => dispatch(fetchCompanions()),
     };    
 };
 
