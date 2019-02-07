@@ -22,6 +22,7 @@ const development = options.mode === 'development';
               reducers: path.resolve(__dirname, 'src', 'reducers'),
               actions: path.resolve(__dirname, 'src', 'actions'),
               middleware: path.resolve(__dirname, 'src', 'middleware'),
+              routes: path.resolve(__dirname, 'src', 'routes'),
             },
         },
         devServer: {

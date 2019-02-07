@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUser } from '../actions';
-
 import RegistrationForm from 'components/RegistrationForm';
 
 class RegistrationFormContainer extends PureComponent {

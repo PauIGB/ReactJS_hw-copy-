@@ -33,7 +33,8 @@ RegistrationForm.propTypes = {
         PropTypes.string,
         PropTypes.bool, 
     ]).isRequired,
-    status: PropTypes.string,
+    info: PropTypes.string,
+    error: PropTypes.bool,
     onHandleChange: PropTypes.func.isRequired,
     onClick: PropTypes.func.isRequired,
 };

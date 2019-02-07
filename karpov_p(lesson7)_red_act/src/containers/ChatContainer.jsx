@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { fetchCompanions } from '../actions';
 
@@ -21,7 +20,6 @@ class ChatContainer extends Component {
     }; 
 
     render() {  
-        console.log(this.props)
         const { userName, companions } = this.props;  
        
         return (  
@@ -46,11 +44,10 @@ function mapDispatchToProps(dispatch) {
     };    
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChatContainer); // при использовании connect react-router перестает работать, нужно оборачивать в 
-//with router
+export default connect(mapStateToProps, mapDispatchToProps)(ChatContainer); 
 
-ChatContainer.propTypes = {
-    userName: PropTypes.string.isRequired,
-    companions: PropTypes.object.isRequired,
-    onGetCompanions: PropTypes.func.isRequired,
-}
+// ChatContainer.propTypes = {
+//     userName: PropTypes.string.isRequired,
+//     companions: PropTypes.object.isRequired,
+//     onGetCompanions: PropTypes.func.isRequired,
+// };

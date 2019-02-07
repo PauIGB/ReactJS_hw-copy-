@@ -1,5 +1,4 @@
 import './Dummy.css';
-
 import React from 'react';
 
 export default function Dummy () {

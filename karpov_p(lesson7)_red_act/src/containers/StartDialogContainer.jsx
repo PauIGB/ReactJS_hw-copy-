@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 import { fetchMessages } from '../actions';
 
@@ -11,15 +11,14 @@ class StartDialogContainer extends PureComponent {
     componentDidMount() {
         const { match, onGetMessages } = this.props;
         onGetMessages(match.params.id);  
-    } 
-
+    };
     componentDidUpdate(prevProps) {
         const { match: { params: { id } }, onGetMessages } = this.props;
         const prevId = prevProps.match.params.id;
         if (prevId !== id) {
             onGetMessages(id);
         };
-    }
+    };
 
     render() {
         const { match: { params: { id } }, messages } = this.props; 
@@ -30,7 +29,7 @@ class StartDialogContainer extends PureComponent {
                 <CommentForm id={id} />  
             </Fragment>    
         );
-    }
+    };
 };
 
 function mapStateToProps (state) {

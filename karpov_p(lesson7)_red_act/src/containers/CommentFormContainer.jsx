@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 import { postMessage } from '../actions';
-
 import CommentForm from 'components/CommentForm';
 
 export default class CommentFormContainer extends PureComponent {

@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import routes from '../../routes';
+import routes from 'routes/chat';
 import СompanionsList from 'containers/СompanionsListContainer';
 
-export default function Chat (props) {
+export default function Chat(props) {
     const { userName, companions } = props;
 
     return (  

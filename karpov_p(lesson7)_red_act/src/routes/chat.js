@@ -5,12 +5,11 @@ export default [
     {
         path: '/chat',
         component: Dummy,
-        exact: true
+        exact: true,
     },
     {
         path: '/chat/:id',
         component: StartDialog,
-        exact: true
+        exact: true,
     },
-
 ]
